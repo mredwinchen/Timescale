@@ -1,80 +1,80 @@
-body{
-  margin:0;
-  padding:0;
+body {
+  margin: 0;
+  padding: 0;
   background-color: #f8f8f8;
 }
-.app{
-  max-width: 640px;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  text-align: center;
-  .title{
-    font-size: 18px;
-    color: #333333;
+
+.app {
+  .title {
     margin: 0;
     padding: 20px 0;
     width: 100%;
+    text-align: center;
+    font-size: 18px;
+    color: #333333;
   }
-  .timescale-content{
-    position: relative;
+  .active-box {
+    position: absolute;
+    top: 0;
+    left: 48%;
+    display: block;
+    height: 100%;
+    width: 14px;
+    background-color: rgba(0, 0, 0, .5);
+  }
+  .numtitle {
+    margin: 0;
+    padding: 10px 0;
     width: 100%;
-    //overflow: hidden;
-    .timescale{
-      width: 320px;
-      height: 70px;
-      border-top: #CCCCCC solid 1px;
-      border-bottom: #CCCCCC solid 1px;
-      margin: 20px auto;
-      overflow: hidden;
-      overflow-x: auto;
-      font-size: 12px;
-      color: #666666;
-      position: relative;
-      ul{
-        text-align: left;
-        position: absolute;
-        width: 1200px;
-        height: 30px;
-        display: block;
-        //background:linear-gradient(to right , #00d6b2 0% ,#2F6FAD 100%);
-        bottom: 0;
-        color: #ffffff;
-        margin: 0;
-        padding: 0;
-        padding-left: 142px;
-        padding-right: 145px;
-        li{
-          display: inline-block;
-          width: 1px;
-          height: 20px;
-          margin: 0 4px;
-          background-color: #999999;
-          position: relative;
-        }
-        li:first-of-type{
-          margin-left: 15px;
-        }
-        span{
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+  }
+  .timescale-container {
+    position: relative;
+    overflow: hidden;
+    width: 320px;
+    height: 70px;
+    border-top: #CCCCCC solid 1px;
+    border-bottom: #CCCCCC solid 1px;
+    margin: 20px auto;
+    font-size: 12px;
+    color: #666666;
+    .timescale-wrapper {
+      .swiper-slide {
+        position: relative;
+        &:after {
+          content: '';
           position: absolute;
-          left: -13px;
-          top: -14px;
-          color: #999;
-          font-size: 12px;
+          bottom: 0;
+          left: 50%;
+          display: block;
+          width: 1px;
+          height: 15px;
+          background-color: #000000;
+        }
+        span {
+          position: absolute;
+          top:5px;
+          left: -60%;
+          display: block;
+          width: 210%;
+          text-align: center;
+        }
+      }
+      .swiper-slide-active {
+        color: #000;
+      }
+      .ssh {
+        &:after {
+          height: 35px;
         }
       }
     }
-    .timescale::-webkit-scrollbar {
-      display: none
-    }
-    .pointer{
-      display: block;
-      width: 10px;
-      height:100%;
-      position: absolute;
-      left: 48%;
-      top:0;
-      background-color: rgba(0,0,0,.5);
+    .timescale-pagination {
+      display: none;
     }
   }
 }
+
+

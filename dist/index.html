@@ -20,20 +20,19 @@
     <meta name="screen-orientation" content="landscape">
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <link rel="stylesheet" href="css/swiper-3.4.0.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<div class="app">
-    <h1 class="title">Timescale</h1>
-    <div class="timescale-content">
-        <div class="timescale" >
-            <ul id="timescale"></ul>
-        </div>
-        <div class="pointer"></div>
-    </div>
-    <p id="timescaleValue">0.00000</p>
+<h1 class="title">Timescale</h1>
+<div class="swiper-container timescale-container">
+    <div class="swiper-wrapper timescale-wrapper"></div>
+    <div class="swiper-pagination timescale-pagination"></div>
+    <span class="active-box"></span>
 </div>
+<p class="numtitle">0</p>
 <script src="js/jquery.min.js"></script>
+<script src="js/swiper-3.4.0.min.js"></script>
 <script src="js/timescale.js"></script>
 </body>
 </html>
